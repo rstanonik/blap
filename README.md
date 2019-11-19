@@ -4,17 +4,17 @@ The two files, `local-post-tasks.yml` and `local-pre-tasks.yml` need to be
 symlinked into [the Project Surfliner monorepo][SL]'s `ansible` directory for
 a successful deployment on UC San Diego infrastructure.
 
-=============== From Soup to Nuts ==============
-create rhel7 vm
-  clone vm from template
-  create infoblox with MAC
-  create AD host entry
-  git clone git@github.com:ucsdlib/ops-ansible-playbooks.git
-  cd ops-ansible-playbooks/playbooks
-  copy vault password from LastPass into .vaultpassword
-  add to environments/kickstart/hosts (fifteen character hostname limit)
-  ansible-playbook kickstart.yml -i environments/kickstart
-  reboot VM
+#From Soup to Nuts
+##create rhel7 vm
+- clone vm from template
+- create infoblox with MAC
+- create AD host entry
+- git clone git@github.com:ucsdlib/ops-ansible-playbooks.git
+- cd ops-ansible-playbooks/playbooks
+- copy vault password from LastPass into .vaultpassword
+- add to environments/kickstart/hosts (fifteen character hostname limit)
+- ansible-playbook kickstart.yml -i environments/kickstart
+- reboot VM
 
 spotlight
   git clone git@gitlab.com:surfliner/surfliner.git
