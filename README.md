@@ -4,8 +4,8 @@ The two files, `local-post-tasks.yml` and `local-pre-tasks.yml` need to be
 symlinked into [the Project Surfliner monorepo][SL]'s `ansible` directory for
 a successful deployment on UC San Diego infrastructure.
 
-#From Soup to Nuts
-##create rhel7 vm
+# From Soup to Nuts
+## create rhel7 vm
 - clone vm from template
 - create infoblox with MAC
 - create AD host entry
