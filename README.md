@@ -16,16 +16,16 @@ a successful deployment on UC San Diego infrastructure.
 - ansible-playbook kickstart.yml -i environments/kickstart
 - reboot VM
 
-spotlight
-  git clone git@gitlab.com:surfliner/surfliner.git
-  cd surfliner/ansible
-  create symlinks
-  ln -s ../../ops-ansible-playbooks/playbooks/starlight/local-pre-tasks.yml
-  ln -s ../../ops-ansible-playbooks/playbooks/starlight/local-post-tasks.yml
-  ansible-galaxy install --roles-path roles -r roles/requirements.yml
+## spotlight
+- git clone git@gitlab.com:surfliner/surfliner.git
+- cd surfliner/ansible
+- create symlinks
+- ln -s ../../ops-ansible-playbooks/playbooks/starlight/local-pre-tasks.yml
+- ln -s ../../ops-ansible-playbooks/playbooks/starlight/local-post-tasks.yml
+- ansible-galaxy install --roles-path roles -r roles/requirements.yml
 
-  cd ops-ansible-playbooks/playbooks
-  ./deploy -D ../../surfliner/ansible/spotlight.yml  -i environments/staging/ -l exhibits-staging -u ansible -b
+- cd ops-ansible-playbooks/playbooks
+- ./deploy -D ../../surfliner/ansible/spotlight.yml  -i environments/staging/ -l exhibits-staging -u ansible -b
 
 Add other roles (eg, ssh_keys)
   ansible-galaxy roles.yml
